@@ -1,5 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import sites from '.sitecore/sites.json';
+// import sites from '.sitecore/sites.json';
 
 const CACHE_MAX_AGE = 86400; // 24 hours
 
@@ -55,10 +55,10 @@ function resolveSiteUrl(req: NextApiRequest): string {
     return `${protoStr}://${hostStr}`;
   }
 
-  const defaultSite = sites?.[0];
-  if (defaultSite?.hostName) {
-    return `https://${defaultSite.hostName}`;
-  }
+  // const defaultSite = sites?.[0];
+  // if (defaultSite?.hostName) {
+  //   return `https://${defaultSite.hostName}`;
+  // }
 
   return 'https://localhost:3000';
 }
