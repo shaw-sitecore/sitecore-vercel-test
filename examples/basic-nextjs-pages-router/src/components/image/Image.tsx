@@ -55,6 +55,7 @@ export const Banner: React.FC<ImageProps> = ({ params, fields }) => {
 };
 
 export const Default: React.FC<ImageProps> = (props) => {
+  console.log('Hello from default image');
   const { fields, params, page } = props;
   const { styles, RenderingIdentifier: id } = params;
   const imageField = getFieldValue(fields?.Image);
